@@ -4,12 +4,7 @@ from mysql.connector import Error
 
 def execute_sql_script(sql_file_path, host, user, password, database):
     try:
-        connection = mysql.connector.connect(
-            host=host,
-            user=user,
-            password=password,
-            database=database
-        )
+        connection = mysql.connector.connect()
 
         if connection.is_connected():
             print("Connected to MySQL database")
